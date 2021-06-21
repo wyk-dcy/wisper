@@ -1,0 +1,36 @@
+spring:
+  datasource:
+    username: root
+    password: 123456
+    url: jdbc:mysql://172.19.2.246:3306/test?useUnicode=true&characterEncoding=utf-8&useSSL=true&serverTimezone=UTC
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  mail:
+    password: ngzwjtnaiqgdebdc
+    username: 2216855594@qq.com
+    host: smtp.qq.com
+    properties:
+      mail:
+       smtp:
+        ssl:
+         enable: true
+  redis:
+    host: 172.19.2.246
+    port: 6379
+    password: 123456
+
+mybatis:
+  type-aliases-package: com.wyk.wisper.pojo.entity
+  mapper-locations: classpath:mybatis/mapper/*.xml
+swagger:
+  show: true
+dubbo:
+  application:
+    name: wisper
+  protocol:
+    port: 20881
+  registry:
+    address: zookeeper://172.19.2.246:2181
+  scan:
+    base-packages: com.wyk.wisper.service
+server:
+  port: 8002
