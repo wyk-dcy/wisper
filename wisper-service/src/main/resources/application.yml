@@ -2,7 +2,7 @@ spring:
   datasource:
     username: root
     password: 123456
-    url: jdbc:mysql://172.19.2.246:3306/test?useUnicode=true&characterEncoding=utf-8&useSSL=true&serverTimezone=UTC
+    url: jdbc:mysql://172.19.3.15:3306/test?useUnicode=true&characterEncoding=utf-8&useSSL=true&serverTimezone=UTC
     driver-class-name: com.mysql.cj.jdbc.Driver
   mail:
     password: ngzwjtnaiqgdebdc
@@ -14,7 +14,7 @@ spring:
         ssl:
          enable: true
   redis:
-    host: 172.19.2.246
+    host: 172.19.3.15
     port: 6379
     password: 123456
 
@@ -29,7 +29,7 @@ dubbo:
   protocol:
     port: 20881
   registry:
-    address: zookeeper://172.19.2.246:2181
+    address: zookeeper://172.19.3.15:2181
   scan:
     base-packages: com.wyk.wisper.service
 server:

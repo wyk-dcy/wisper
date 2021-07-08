@@ -1,5 +1,6 @@
 package com.wyk.wisper.controller;
 
+import com.wyk.RepeatSubmit;
 import com.wyk.wisper.mapper.UserMapper;
 import com.wyk.wisper.pojo.entity.User;
 import io.swagger.annotations.Api;
@@ -25,6 +26,7 @@ public class UserController {
 
     @ApiOperation("查询用户")
     @RequestMapping("/index")
+    @RepeatSubmit
     public String test() {
         User user = userMapper.queryById(3);
 

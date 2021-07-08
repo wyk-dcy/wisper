@@ -1,5 +1,7 @@
 package com.wyk.wisper.test;
 
+import com.alibaba.excel.EasyExcel;
+import com.wyk.wisper.utils.CSVWriterUtils;
 import org.apache.poi.hssf.usermodel.HSSFWorkbook;
 import org.apache.poi.ss.usermodel.Cell;
 import org.apache.poi.ss.usermodel.Row;
@@ -9,6 +11,9 @@ import org.junit.jupiter.api.Test;
 
 import java.io.FileOutputStream;
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.Date;
+import java.util.List;
 
 /**
  * @author wuyongkang
@@ -41,5 +46,51 @@ public class ExcelTest {
         w.write(fo);
         fo.close();
     }
+
+    @Test
+    public void demo() throws IOException {
+        String fileName = "D:\\work\\tool\\workspace\\wisper测试.xlsx";
+        EasyExcel.write(fileName).head(head()).sheet("模板").doWrite(dataList());
+    }
+
+    private List<List<String>> head() {
+        List<List<String>> list = new ArrayList<>();
+        List<String> head0 = new ArrayList<>();
+        head0.add("姓名");
+        List<String> head1 = new ArrayList<>();
+        head1.add("年龄");
+        List<String> head2 = new ArrayList<>();
+        head2.add("生日");
+        list.add(head0);
+        list.add(head1);
+        list.add(head2);
+        return list;
+    }
+
+    private List<List<Object>> dataList() {
+        List<List<Object>> list = new ArrayList<>();
+        for (int i = 0; i < 10; i++) {
+            List<Object> data = new ArrayList<>();
+            data.add("张三");
+            data.add(25);
+            data.add(new Date());
+            list.add(data);
+        }
+        return list;
+    }
+
+    @Test
+    public void testCSV() throws IOException {
+        String[] strings = {"1", "2", "3", "4"};
+        List<String[]> list = new ArrayList<String[]>();
+        list.add(new String[] {"1", "Sundar Pichai ♥", "CEO", "Google"});
+        list.add(new String[] {"2", "Satya Nadella", "CEO", "Microsoft"});
+        list.add(new String[] {"3", "Tim cook", "CEO", "Apple"});
+        list.add(new String[] {"4", "Mark Zuckerberg", "CEO", "Facebook"});
+        CSVWriterUtils.write("D:\\work\\tool\\workspace\\wisper\\测试.csv",strings,list);
+
+
+    }
+
 
 }
