@@ -11,7 +11,6 @@ import java.util.concurrent.TimeUnit;
  */
 public class DemoFuture {
     public static void main(String[] args) throws ExecutionException, InterruptedException {
-        test();
         CompletableFuture<Void> voidCompletableFuture = CompletableFuture.runAsync(() -> {
             try {
                 TimeUnit.SECONDS.sleep(4);
@@ -21,7 +20,7 @@ public class DemoFuture {
             System.out.println("吴永康最帅" + Thread.currentThread());
         });
         System.out.println("00000");
-        voidCompletableFuture.get();
+        System.out.println(voidCompletableFuture.get());
     }
 
     private static void test() throws ExecutionException, InterruptedException {
