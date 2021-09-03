@@ -23,8 +23,6 @@ public class ConfigB {
         // now both beans A and B will be available...
         A a = ctx.getBean(A.class);
         B b = ctx.getBean(B.class);
-        System.out.println(a.hashCode());
-        System.out.println(b.hashCode());
 
     }
 }

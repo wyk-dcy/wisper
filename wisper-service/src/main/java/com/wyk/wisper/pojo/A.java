@@ -1,7 +1,10 @@
 package com.wyk.wisper.pojo;
 
 
+import com.wyk.wisper.pojo.entity.ModbusDomain;
+
 import javax.inject.Singleton;
+import java.util.ArrayList;
 
 /**
  * @author wuyongkang
@@ -10,7 +13,22 @@ import javax.inject.Singleton;
 @Singleton
 public class A {
     public static void main(String[] args) {
-        System.out.println(Double.parseDouble("0.0"));
+        ArrayList<ModbusDomain> array = new ArrayList<>();
+        array.add(new ModbusDomain());
+        array.add(new ModbusDomain());
+        array.add(new ModbusDomain());
+        array.add(new ModbusDomain());
+        array.add(new ModbusDomain());
+        array.add(new ModbusDomain());
+        array.add(new ModbusDomain());
+        array.add(new ModbusDomain());
+        array.add(new ModbusDomain());
+        array.add(new ModbusDomain());
+        array.add(new ModbusDomain());
+        array.add(new ModbusDomain());
+
+
+        ArrayList<ModbusDomain> arrayList =new ArrayList<>(array);
 
     }
 }

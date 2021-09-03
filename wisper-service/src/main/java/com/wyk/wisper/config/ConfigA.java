@@ -6,6 +6,7 @@ import org.springframework.context.annotation.Configuration;
 
 @Configuration
 public class ConfigA {
+    private String a;
 
     @Bean
     public A a() {

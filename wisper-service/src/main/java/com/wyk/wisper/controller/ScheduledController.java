@@ -24,7 +24,6 @@ public class ScheduledController {
     @ApiOperation("定时任务")
     @RequestMapping("/add/scheduled")
     public String Scheduled() {
-        System.out.println(a.hashCode());
         return "succes"+a.hashCode();
     }
 }
