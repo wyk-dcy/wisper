@@ -10,4 +10,7 @@ public class AAA {
     public static void main(String[] args) {
         System.out.println("你说啥");
     }
+    private void test(){
+        System.out.println("WOJHIUANG");
+    }
 }
