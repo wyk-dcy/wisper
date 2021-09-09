@@ -93,8 +93,6 @@ public class UserController {
     }
 
     public static void main(String[] args) {
-        System.out.println(new A().hashCode());
-        System.out.println(new A());
-        System.out.println(new A().hashCode());
+
     }
 }
