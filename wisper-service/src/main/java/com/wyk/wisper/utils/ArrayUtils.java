@@ -1,5 +1,7 @@
 package com.wyk.wisper.utils;
 
+import com.wyk.wisper.pojo.entity.ModbusDomain;
+
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collection;
@@ -97,5 +99,10 @@ public final class ArrayUtils {
             }
         }
         return result.toArray();
+    }
+
+    public static void main(String[] args) {
+        System.out.println((1<<8) - 1);
+
     }
 }

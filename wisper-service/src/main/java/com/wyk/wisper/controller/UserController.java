@@ -95,4 +95,10 @@ public class UserController {
     public static void main(String[] args) {
 
     }
+
+    private void Demo(){
+        System.out.println("dsaihkdi");
+
+        String a ="";
+    }
 }
